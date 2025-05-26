@@ -9,17 +9,20 @@
 </head>
 <body>
 
-<?php
-if(isset($_GET['erro'])){
-    if($_GET['erro']==1){
-        echo "<h4>E-mail ou senha incorretos!</h4>";
+
+
+<div class = "container">
+    <?php
+if (isset($_GET['erro'])) {
+    if ($_GET['erro'] == 1) {
+        echo '<p>E-mail ou senha incorretos!</p>';
+    } elseif ($_GET['erro'] == 2) {
+        echo '<p>Por favor, preencha todos os campos!</p>';
     }
 }
+
 ?>
-
-     <div class = "container">
-
-         <h2>entre na sua conta:</h2>
+    <h2>entre na sua conta:</h2>
     <form action="login.php" method="POST">
 
         <label>Email:</label>
@@ -31,6 +34,6 @@ if(isset($_GET['erro'])){
         <input type="submit" value="entrar" class= "input_user_button">
         
     </form>
-    </div>
+ </div>
 </body>
 </html>

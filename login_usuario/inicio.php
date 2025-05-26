@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tela inicial</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body >
     <?php
     session_start();
     if(!isset($_SESSION['sessao_user'])){
@@ -13,7 +14,7 @@
         exit;
     }
     ?>
-    <h1>deu certo? true or false</h1>
+    <h1 id="tela_inicial">tela de inicio temporaria</h1>
     <form action="logout.php"><button type ="submit">sair</button></form>
 </body>
 </html>

@@ -27,7 +27,7 @@ session_start();
  } else{
     $email = null;
     $senha = null;
-    header ("location:index.php");
+    header ("location:index.php?erro=2");
     exit;
  }
 
