@@ -15,9 +15,9 @@
     <?php
 if (isset($_GET['erro'])) {
     if ($_GET['erro'] == 1) {
-        echo '<p>E-mail ou senha incorretos!</p>';
+        echo '<h3 style = "color:white">E-mail ou senha incorretos!</h3>';
     } elseif ($_GET['erro'] == 2) {
-        echo '<p>Por favor, preencha todos os campos!</p>';
+        echo '<h3 style = "color:white">Por favor, preencha todos os campos!</h3>';
     }
 }
 
