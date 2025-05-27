@@ -14,7 +14,9 @@
         exit;
     }
     ?>
+    
+ <form action="logout.php">
     <h1 id="tela_inicial">tela de inicio temporaria</h1>
-    <form action="logout.php"><button type ="submit">sair</button></form>
+    <button type ="submit"  id = "button_logout">sair</button></form>
 </body>
 </html>

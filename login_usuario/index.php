@@ -13,25 +13,25 @@
 
 <div class = "container">
     <?php
-if (isset($_GET['erro'])) {
-    if ($_GET['erro'] == 1) {
-        echo '<h3 style = "color:white">E-mail ou senha incorretos!</h3>';
-    } elseif ($_GET['erro'] == 2) {
-        echo '<h3 style = "color:white">Por favor, preencha todos os campos!</h3>';
-    }
-}
-
-?>
-    <h2>entre na sua conta:</h2>
+        if (isset($_GET['erro'])) {
+            if ($_GET['erro'] == 1) {
+                echo '<h3 class="erro">E-mail ou senha incorretos!</h3>';
+            } elseif ($_GET['erro'] == 2) {
+                echo '<h3 class="erro">Por favor, preencha todos os campos!</h3>';
+            }
+        }
+    ?>
+    <h2>Entre na sua conta:</h2>
     <form action="login.php" method="POST">
 
         <label>Email:</label>
-        <input type="email" name="email" id= "email"   class= "input_user"><br>
+        <input type="email" name="email" id= "email"   class= "input_user" required><br>
 
         <label>Senha:</label>
-        <input type="password" name="senha" id= "senha"   class= "input_user"><br>
+        <input type="password" name="senha" id= "senha"   class= "input_user" required><br>
         
         <input type="submit" value="entrar" class= "input_user_button">
+        <a href="http://localhost/caderneta_vovo/login_usuario/cadastrar_usuario.php" class= "link_sign"> <h6>Não tem conta? Registre-se</h6></a>
         
     </form>
  </div>
