@@ -26,27 +26,29 @@ if (!$receita) {
 <head>
     <meta charset="UTF-8">
     <title>Editar Receita</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    <h2>Editar Receita</h2>
+<body class= "corpo">
+    <div class="container">
 
-    <form action="atualizar_receita.php" method="POST">
+        <h2>Editar Receita</h2>
+        <form action="atualizar_receita.php" method="POST">
         <input type="hidden" name="id" value="<?= $receita['id'] ?>">
 
         <label>Título:</label>
-        <input type="text" name="titulo" value="<?= $receita['titulo'] ?>" required><br>
+        <input type="text" name="titulo" value="<?= $receita['titulo'] ?>" required class="input_user"><br>
 
         <label>Descrição:</label>
-        <textarea name="descricao" required><?= $receita['descricao'] ?></textarea><br>
+        <textarea name="descricao" required class="input_user"><?= $receita['descricao'] ?></textarea><br>
 
         <label>Modo de Preparo:</label>
-        <textarea name="modo_preparo" required><?= $receita['modo_preparo'] ?></textarea><br>
+        <textarea name="modo_preparo" required class="input_user"><?= $receita['modo_preparo'] ?></textarea><br>
 
         <label>Porção:</label>
-        <input type="text" name="porcao" value="<?= $receita['porcao'] ?>" required><br>
+        <input type="text" name="porcao" value="<?= $receita['porcao'] ?>" required class="input_user"><br>
 
         <label>Categoria:</label>
-        <select name="id_categoria" required>
+        <select name="id_categoria" required class="input_user">
             <?php
             foreach ($categorias as $cat) {
                 $selected = $cat['id'] == $receita['id_categoria'] ? 'selected' : '';
@@ -55,7 +57,10 @@ if (!$receita) {
             ?>
         </select><br>
 
-        <input type="submit" value="Atualizar Receita">
-    </form>
+        <input type="submit" value="Salvar Alterações" class="input_user_button">
+         </form>
+
+    </div>
+   
 </body>
 </html>
