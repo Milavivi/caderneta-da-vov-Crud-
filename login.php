@@ -9,7 +9,7 @@ session_start();
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    if ($user ->login($email, $senha)== true) {
+    if ($user->login($email, $senha)== true) {
       if (isset ($_SESSION['sessao_user'])) {
          header ('location: inicio.php');
          exit;
@@ -30,19 +30,6 @@ session_start();
     header ("location:index.php?erro=2");
     exit;
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>

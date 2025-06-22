@@ -5,8 +5,8 @@ class user_login{
         
         $sql = "SELECT * FROM usuarios WHERE email = :email and senha = :senha";
         $sql = $conexao ->prepare ($sql);
-        $sql ->bindvalue ("email", $email);
-        $sql ->bindvalue ("senha", $senha);
+        $sql ->bindValue ("email", $email);
+        $sql ->bindValue ("senha", $senha);
         $sql -> execute ();
 
         if ($sql ->rowcount() > 0) {
@@ -20,29 +20,9 @@ class user_login{
         }
 
 
-
-
     }
 
 
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
