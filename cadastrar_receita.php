@@ -13,7 +13,7 @@ require_once 'protecao.php';
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class = "corpo">
+<body class= "corpo">
 
 <?php
 $pegar_categoria = $conexao->query("SELECT id, nome_categoria FROM categorias");

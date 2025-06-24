@@ -29,7 +29,7 @@ try {
 
             echo "<div class='card_receita'>";
 
-            echo "<h4>" . htmlspecialchars($categoria['nome_categoria']) . "</h4>";
+            echo "<h4>" . $categoria['nome_categoria'] . "</h4>";
 
             echo "<div class='botoes_receita'>";
                 echo "<a href='editar_categoria.php?id={$categoria['id']}'><button class='botao_editar'>Editar</button></a> ";
@@ -42,6 +42,13 @@ try {
         }
 
         echo "</div>";
+        
+     echo "<div class='botao_cadastrar'>";
+        echo "<a href='cadastrar_categoria.php'>
+            <button id='btn_cadastrar_receita'>Cadastrar Categoria</button>
+        </a>";
+     echo "</div>";
+
 
     } else {
         echo "<p class='erro'>Nenhuma categoria encontrada.</p>";

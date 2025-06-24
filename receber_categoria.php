@@ -11,8 +11,9 @@ if (!empty($nome_categoria)) {
         $stmt->bindValue(1, $nome_categoria);
 
         if ($stmt->execute()) {
+            header ("location:listar_categoria.php");
             echo "Categoria cadastrada com sucesso!";
-            echo '<br><a href="criar_categoria.php">Cadastrar outra</a>';
+        
         } else {
             echo "Erro ao cadastrar categoria.";
         }
