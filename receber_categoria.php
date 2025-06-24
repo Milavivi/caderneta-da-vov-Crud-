@@ -12,7 +12,7 @@ if (!empty($nome_categoria)) {
 
         if ($stmt->execute()) {
             header ("location:listar_categoria.php");
-            echo "Categoria cadastrada com sucesso!";
+            
         
         } else {
             echo "Erro ao cadastrar categoria.";
